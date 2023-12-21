@@ -173,37 +173,34 @@ export function cartDrawer(){
         matchingProduct = productItem;
       } 
     });
-    
-    if(matchingProduct.length !== 0 || matchingProduct.length > 0){
-      cartHtml = `
-        <div class="shopping-cart__product-list">
-          <ul class="product-list-widget">
-            ${cartItemHtml += `
-              <li class="mini-cart-item js-product-${matchingProduct.id}">
-                <a class="item-remove js-remove" data-product-id="${cartItem.productId}"><i class="fa-regular fa-circle-xmark"></i></a>
-                <a href="" class="mini-cart-item__img">
-                  <img src="data/assets/${matchingProduct.image}" alt="">
-                  ${matchingProduct.name}
-                </a>
-                <div class="cart-quantity">
-                  <a class="cart-quantity-btn__minus js-minus-btn" data-product-id="${cartItem.productId}">-</a>
-                  <input type="text" value="${cartItem.quantity}" class="cart-quantity-count js-save-link js-quantity-input-${matchingProduct.id}" data-product-id="${cartItem.productId}">
-                  <a class="cart-quantity-btn__add js-add-btn" data-product-id="${cartItem.productId}">+</a>
-                </div>
-                <div class="mini-cart__price js-subtotal-price">$${formatCurrency(matchingProduct.priceCents, cartItem.quantity)}</div>
-              </li>
-            `}
-          </ul>
-          <p class="mini-cart__total">
-            <strong>Subtotal:</strong>
-            <span class="subtotal-price">$</span>
-          </p>
-          <div class="shopping-cart-button">
-            <div class="shopping-cart-button__view-cart"><a href="checkout.html">Check Out</a></div>
-          </div>
+    cartHtml = `
+      <div class="shopping-cart__product-list">
+        <ul class="product-list-widget">
+          ${cartItemHtml += `
+            <li class="mini-cart-item js-product-${matchingProduct.id}">
+              <a class="item-remove js-remove" data-product-id="${cartItem.productId}"><i class="fa-regular fa-circle-xmark"></i></a>
+              <a href="" class="mini-cart-item__img">
+                <img src="data/assets/${matchingProduct.image}" alt="">
+                ${matchingProduct.name}
+              </a>
+              <div class="cart-quantity">
+                <a class="cart-quantity-btn__minus js-minus-btn" data-product-id="${cartItem.productId}">-</a>
+                <input type="text" value="${cartItem.quantity}" class="cart-quantity-count js-save-link js-quantity-input-${matchingProduct.id}" data-product-id="${cartItem.productId}">
+                <a class="cart-quantity-btn__add js-add-btn" data-product-id="${cartItem.productId}">+</a>
+              </div>
+              <div class="mini-cart__price js-subtotal-price">$${formatCurrency(matchingProduct.priceCents, cartItem.quantity)}</div>
+            </li>
+          `}
+        </ul>
+        <p class="mini-cart__total">
+          <strong>Subtotal:</strong>
+          <span class="subtotal-price">$</span>
+        </p>
+        <div class="shopping-cart-button">
+          <div class="shopping-cart-button__view-cart"><a href="checkout.html">Check Out</a></div>
         </div>
-      `;
-    }
+      </div>
+    `;
     document.querySelector('.cart-drawer-content').innerHTML = cartHtml;
     document.querySelector('.product-list-widget').innerHTML = cartItemHtml;
     document.querySelectorAll('.js-remove').forEach((button) => {
