@@ -1,0 +1,23 @@
+body{
+  background-color: #eeeeee;
+}
+.scale{
+  transition: .5s ease-in-out;
+}
+.products-item:hover .scale{
+  transform: scale(1.1);
+}
+.no-more-product{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.no-more-product span{
+  font-size: 16px;
+  color: #444;
+  border: 1px solid #638187;  
+  padding: 10px 20px;
+}
+.latest-product__inner{
+  padding: 0 !important;
+}

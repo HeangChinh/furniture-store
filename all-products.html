@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <title>All Products - Furniture Store</title>
+  <link rel="stylesheet" href="template/css/furniture.css" />
+  <link rel="stylesheet" href="template/css/all-product.css">
+  <link rel="icon" href="data/icon.png" />
+</head>
+<body>
+  <div id="page">
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <div class="site-header">
+          <div class="site-header-inner">
+            <!-- desktop site -->
+            <div class="desktop">
+              <div class="site-header__left">
+                <div class="site-header__logo">
+                  <a href="index.html">
+                    <img src="data/logo.png" alt="Furniture logo">
+                  </a>
+                </div>
+                <div class="site-header__menu">
+                  <ul class="menu">
+                    <!-- javascript -->
+                    <li class="menu-item"><a class="menu-link" href="all-products.html">All Products</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="site-header__right">
+                <div class="site-header__menu">
+                  <ul class="menu">
+                    <!-- javascript -->
+                    <li class="menu-item"><a class="menu-link" href="#">My Account</a></li>
+                  </ul>
+                </div>
+                <div class="site-header__cart">
+                  <a class="site-header__cart-wrap">
+                    <span class="subtotal-price">$0.00</span>
+                    <i class="fa-solid fa-cart-shopping">
+                      <div class="cart-value js-cart-value">0</div>
+                    </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- mobile site -->
+            <div class="bg-overlay"></div>
+            <div class="mobile">
+              <div class="site-header__toggle-btn">
+                <div class="toggle-btn">
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+              </div>
+              <div class="mobile-inner">
+                <div class="site-header__toggle-btn">
+                  <div class="toggle-btn btn-hide">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+                <div class="toggle-menu__inner">
+                  <div class="site-header__menu">
+                    <ul class="menu">
+                      <!-- javascript -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- SITE CONTENT -->
+    <div id="site-content">
+      <div class="container">
+        <div class="site-content__inner">
+          
+          <!-- products -->
+          <section class="products">
+            <div class="products-container">
+              <ul class="products-list js-products column-4">
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>      
+    </div>
+    <!-- cart drawer -->
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <div class="cart-drawer__title">Shopping Cart</div>
+        <div class="site-header__toggle-btn">
+          <div class="toggle-btn btn-hide">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+      </div>
+      <div class="cart-drawer-content">
+      </div>
+    </div>
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="connect-us">
+          <div class="connect-us__title">Connect with Us</div>
+          <ul class="connect-us__link">
+            <li class="connect-us__link"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+            <li class="connect-us__link"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="connect-us__link"><a href="#"><i class="fab fa-google"></i></a></li>
+            <li class="connect-us__link"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="connect-us__link"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+          </ul>   
+        </div>
+        <!-- product link -->
+        <div class="widget">
+          <div class="widget-inner column-4 column-6"></div>
+        </div>
+        <div class="copy-right">
+          <span class="copy-right__copyright">Copyright © 2023 Furniture Store</span>
+          <span class="copy-right__powerby">Powered by Furniture Store</span>
+        </div>
+      </div> 
+    </footer>
+  </div>
+  <script type="module" src="template/js/all-products.js"></script>
+</body>
+</html>
