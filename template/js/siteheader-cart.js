@@ -150,7 +150,7 @@ function isEmptyCart(){
           <p class="shopping-cart__empty-message">No products in the cart.</p>
         </div>
         <div class="shopping-cart-button">
-          <div class="shopping-cart-button__con"><a href="../../all-products.html">Continue Shopping</a></div>
+          <div class="shopping-cart-button__con"><a href="all-products.html">Continue Shopping</a></div>
         </div>
       </div>
     `;

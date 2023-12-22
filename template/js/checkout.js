@@ -2,7 +2,7 @@ import { cart, removeFromCart, updateCartQuantity } from "../../data/products/ca
 import { products } from "../../data/products/products.js";
 import { formatCurrency } from "./utils/money.js";
 import { updateCartAmounts } from "./siteheader-cart.js";
-renderCheckOut();
+
 updateCartAmounts(renderCheckOut);
 updateCartQuantity();
 function cartCurrentlyEmpty(){
@@ -31,11 +31,11 @@ function renderCheckOut(){
         matchingProduct = productItem;
       } 
     });
-
+    console.log(matchingProduct.image);
     cartItemHtml += `
       <tr class="js-product-${matchingProduct.id} product-item-inner product-list-widget">
         <td class="product-thumbnail">
-          <a href=""><img src="../../data/assets/${matchingProduct.image}"></a>
+          <a href=""><img src="data/assets/${matchingProduct.image}"></a>
         </td>
         <td class="product-name">${matchingProduct.name}</td>
         <td class="product-price">$${formatCurrency(matchingProduct.priceCents, 1)}</td>
