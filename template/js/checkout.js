@@ -2,7 +2,8 @@ import { cart, removeFromCart, updateCartQuantity } from "../../data/products/ca
 import { products } from "../../data/products/products.js";
 import { formatCurrency } from "./utils/money.js";
 import { updateCartAmounts } from "./siteheader-cart.js";
-
+renderCheckOut();
+updateCartAmounts(renderCheckOut);
 updateCartQuantity();
 function cartCurrentlyEmpty(){
   if(cart.length === 0){

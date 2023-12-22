@@ -6,9 +6,10 @@ body{
   background-color: #fff;
 }
 .product-list{
-  display: grid;
-  grid-template-columns: 70% 30%;
+  display: flex;
   background-color: #fff;
+  column-gap: 22px;
+  row-gap: 50px;
 }
 table, th, td{
   border: 1px solid #cccccc;
@@ -42,6 +43,9 @@ th, td{
 /* PRODUCT LIST */
 .product-item{
   position: relative;
+}
+.product-list__in-cart{
+  width: 100%;
 }
 .product-thumbnail{
   width: 100px;
@@ -96,9 +100,6 @@ th, td{
 }
 .cart-quantity-btn__add{
   border-left: 0;
-}
-.product-list__in-cart{
-  margin-right: 22px;
 }
 /* CART TOTALs */
 .cart-totals-tatals{
@@ -166,5 +167,10 @@ th, td{
     padding-top: 0;
     padding-bottom: 0;
     height: 30px;
+  }
+}
+@media (width < 933px) {
+  .product-list{
+    flex-direction: column;
   }
 }
