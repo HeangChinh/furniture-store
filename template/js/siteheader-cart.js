@@ -109,7 +109,6 @@ export function updateCartAmounts(checkOut){
         checkOut();
         updateCartQuantity();
       }, 1500);
-      
     });
   });
   // minus
@@ -171,7 +170,7 @@ export function cartDrawer(){
     products.forEach((productItem) => {
       if(productItem.id === productId){
         matchingProduct = productItem;
-      } 
+      }
     });
     cartHtml = `
       <div class="shopping-cart__product-list">
@@ -203,6 +202,7 @@ export function cartDrawer(){
     `;
     document.querySelector('.cart-drawer-content').innerHTML = cartHtml;
     document.querySelector('.product-list-widget').innerHTML = cartItemHtml;
+
     document.querySelectorAll('.js-remove').forEach((button) => {
       button.addEventListener('click', () => {
         const productId = button.dataset.productId;
