@@ -15,7 +15,7 @@ export function addToCartList(){
   // onscroll
   function menuBar(){
     const siteHeader = document.querySelector('.site-header');
-    window.scrollY > 100 ? siteHeader.classList.add('scroll-change') : siteHeader.classList.remove('scroll-change');
+    window.scrollY > 50 ? siteHeader.classList.add('scroll-change') : siteHeader.classList.remove('scroll-change');
   }
   window.addEventListener('scroll', menuBar, false);
   // function remove active from element
@@ -35,11 +35,12 @@ export function addToCartList(){
     mobile.classList.add('active');
     addActive();
   });
+  // site header cart
   siteHeaderCart.addEventListener('click', () => {
     cartdrawer.classList.add('active');
     addActive();
   });
-
+  
   toggleBtnHide.forEach(element => {
     element.addEventListener('click', () => {
       removeActive();
@@ -88,7 +89,7 @@ export function updateCartAmounts(checkOut){
           cartDrawer();
           checkOut();
           updateCartQuantity();
-        }, 4000);
+        }, 3000);
       }
     });
   });
@@ -108,7 +109,7 @@ export function updateCartAmounts(checkOut){
         cartDrawer();
         checkOut();
         updateCartQuantity();
-      }, 1500);
+      }, 1000);
     });
   });
   // minus
@@ -135,7 +136,7 @@ export function updateCartAmounts(checkOut){
         cartDrawer();
         checkOut();
         updateCartQuantity();
-      }, 1500);
+      }, 1000);
     });
   });
 }

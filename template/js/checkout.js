@@ -1,15 +1,17 @@
 import { cart, removeFromCart, updateCartQuantity } from "../../data/products/cart.js";
 import { products } from "../../data/products/products.js";
-import { formatCurrency } from "./utils/money.js";
+import { formatCurrency, totalPrice } from "./utils/money.js";
 import { updateCartAmounts } from "./siteheader-cart.js";
+import { siteMenuLink } from "../js/siteMenu/site-menu-link.js";
 
+siteMenuLink();
 updateCartAmounts(renderCheckOut);
 updateCartQuantity();
 function cartCurrentlyEmpty(){
   if(cart.length === 0){
     document.querySelector('.site-content__inner').innerHTML = `
       <div class="product-list-empty">
-        <div class="product-currenty-empty">
+        <div class="product-currently-empty">
           Your cart is currently empty.
         </div>
         <div class="site-btn">
@@ -31,7 +33,6 @@ function renderCheckOut(){
         matchingProduct = productItem;
       } 
     });
-    console.log(matchingProduct.image);
     cartItemHtml += `
       <tr class="js-product-${matchingProduct.id} product-item-inner product-list-widget">
         <td class="product-thumbnail">
@@ -69,6 +70,7 @@ function renderCheckOut(){
     document.querySelectorAll('.subtotal-price').forEach((subtotalPrice) => {
       subtotalPrice.innerHTML = `$${subtotal.toFixed(2)}`;
     });
+    document.querySelector('.cart-total__total-price').innerHTML = `$${totalPrice(subtotal, 2)}`;
   });
   cartCurrentlyEmpty();
   updateCartAmounts(renderCheckOut);

@@ -7,6 +7,6 @@ import { addToCartBtn } from "../../data/products/add-to-cart.js";
 siteMenuLink();
 addToCartList();
 cartDrawer();
-renderAllProducts('all');
+renderAllProducts('table');
 updateCartQuantity();
 addToCartBtn();
